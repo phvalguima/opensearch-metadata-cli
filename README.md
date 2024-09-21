@@ -17,7 +17,7 @@ If needed, clean the previous cached dependencies:
 
 ## Executing
 
-The first step is to make sure you have access to the jar files from opensearch. One option is to download the `opensearch snap`.
+The first step is to make sure you have access to the jar files from opensearch.
 
 First, power down the opensearch service running in your machine. One example of potential command:
 
@@ -25,15 +25,15 @@ First, power down the opensearch service running in your machine. One example of
 sudo java \
   -Dopensearch.path.home="$OPENSEARCH_HOME" \
   -Dopensearch.path.conf="$OPENSEARCH_PATH_CONF" \
-  -cp /snap/opensearch/current/usr/share/opensearch/lib/*:app/build/libs/app.jar \
+  -cp "$OPENSEARCH_PATH_CONF"/lib/*:app/build/libs/app.jar \
     org.opensearch.cli.main.Node list-metadata
 ```
 
 OBS.: `sudo` may be needed as the folders will not be accessible to your current user.
 
-### Debugging
+### Debugging Example
 
-To debug using the `opensearch snap` installed:
+Let's assume [`opensearch snap`](https://snapcraft.io/opensearch) is installed. To debug it, run:
 
 ```
 sudo java \
