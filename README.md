@@ -1,5 +1,8 @@
-# opensearch-cli-test
-Some tests with an external CLI that allows to inspect opensearch metadata
+# OpenSearch Metadata CLI
+
+Manage the node's metadata using CLI commands.
+
+**WARNING**: BEWARE tinkering with opensearch metadata may cause *irreversible data loss*!
 
 ## Building
 
